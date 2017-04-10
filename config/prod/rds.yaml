@@ -1,0 +1,16 @@
+template_path: src/rds.py
+
+parameters:
+  VpcId: !stack_output vpc::VpcId 
+  Subnet1: !stack_output vpc::PrivateSubnet1ID
+  Subnet2: !stack_output vpc::PrivateSubnet2ID
+  Environment: !stack_output vpc::Environment
+  RDSSecurityGroup: !stack_output security-groups::RDSsg
+  MultiAZDatabase: "true"
+  DBInstanceClass: db.t2.large 
+  DBAllocatedStorage: "7"
+  DBName: wordpress
+  DBPass: wordpress123
+  DBUser: wordpress
+  DatabaseEngine: MySQL
+

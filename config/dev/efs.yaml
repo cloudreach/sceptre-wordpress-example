@@ -1,0 +1,9 @@
+template_path: src/efs.py
+
+parameters:
+  VpcId: !stack_output vpc::VpcId 
+  Subnet1: !stack_output vpc::PrivateSubnet1ID
+  Subnet2: !stack_output vpc::PrivateSubnet2ID  
+  Environment: !stack_output vpc::Environment 
+  EfsSecurityGroup: !stack_output security-groups::EFSsg       
+  PerformanceMode: generalPurpose 
