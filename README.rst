@@ -61,6 +61,12 @@ Sceptre organises stacks into environments. Each stack is represented by a YAML 
       └── wordpress.py
 
 
+Diagram
+-------
+
+.. image:: diagram.jpg
+  :align: right
+
 
 Install
 -------
@@ -78,7 +84,7 @@ How to start
 Sceptre can be used from the CLI, or imported as a Python package.::
 
   $ git clone git@github.com:cloudreach/sceptre-wordpress-example.git
-  $ cd meetup-sceptre-aws
+  $ cd sceptre-wordpress-example
 
 Be sure your `AWS credential <http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html#cli-quick-configuration>`__ are properly configured
 
