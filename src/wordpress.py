@@ -330,7 +330,8 @@ class WordpressASG(CloudformationAbstractBaseClass):
         self.WebServerAutoScalingGroup = self.template.add_resource(autoscaling.AutoScalingGroup(
             "WebServerAutoScalingGroup",
             MinSize=Ref(self.WebServerCapacity),
-            MaxSize="10",
+            DesiredCapacity=Ref(self.WebServerCapacity),
+            MaxSize=Ref(self.WebServerCapacity),
             VPCZoneIdentifier=[Ref(self.Subnet1), Ref(self.Subnet2)],
             AvailabilityZones=[Ref(self.AvailabilityZone1),
                                Ref(self.AvailabilityZone2)],
