@@ -12,7 +12,7 @@ class SecurityGroup(CloudformationAbstractBaseClass):
 
     def __init__(self, sceptre_user_data):
         super(self.__class__, self).__init__()
-        self.template.add_description("""Wordpress SG""")
+        self.template.set_description("""Wordpress SG""")
         self.add_parameters()
         self.add_resources()
         self.add_outputs()
