@@ -1,4 +1,4 @@
-template_path: src/vpc.py
+template_path: vpc.py
 
 parameters:
   Project: WordpressEFS

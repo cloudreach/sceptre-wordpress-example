@@ -1,4 +1,4 @@
-template_path: src/rds.py
+template_path: rds.py
 
 parameters:
   VpcId: !stack_output {{ env }}/vpc.yaml::VpcId

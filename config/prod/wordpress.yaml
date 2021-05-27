@@ -1,4 +1,4 @@
-template_path: src/wordpress.py
+template_path: wordpress.py
 
 parameters:
   VpcId: !stack_output {{ env }}/vpc.yaml::VpcId

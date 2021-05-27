@@ -1,4 +1,4 @@
-template_path: src/efs.py
+template_path: efs.py
 
 parameters:
   VpcId: !stack_output {{ env }}/vpc.yaml::VpcId
