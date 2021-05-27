@@ -103,4 +103,4 @@ def sceptre_handler(sceptre_user_data):
     return SecurityGroup(sceptre_user_data).template.to_json()
 
 if __name__ == '__main__':
-    print sceptre_handler()
+    print (sceptre_handler())
