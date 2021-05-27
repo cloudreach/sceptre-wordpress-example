@@ -90,12 +90,13 @@ Be sure your `AWS credential <http://docs.aws.amazon.com/cli/latest/userguide/cl
 
 How to deploy ``dev`` and ``prod`` ::
 
-  $ sceptre launch-env dev
-  $ sceptre launch-env prod
+  $ sceptre launch dev
+  $ sceptre launch prod
 
 How to apply a change-set on ``dev`` for ``wordpress`` stack ::
 
-  $ sceptre update-stack-cs dev wordpress
+  $ sceptre create dev wordpress
+  $ sceptre execute dev wordpress
 
 
 

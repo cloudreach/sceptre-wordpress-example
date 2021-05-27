@@ -1,22 +1,22 @@
 template_path: src/wordpress.py
 
 parameters:
-  VpcId: !stack_output vpc::VpcId 
-  Environment: !stack_output vpc::Environment 
-  Subnet1: !stack_output vpc::PublicSubnet1ID
-  Subnet2: !stack_output vpc::PublicSubnet2ID  
-  RDSEndpoint: !stack_output rds::MySQLAddress
-  FileSystemID: !stack_output efs::FileSystemID
-  ElbSecurityGroup: !stack_output security-groups::ELBsg 
-  WebSecurityGroup: !stack_output security-groups::WEBsg
+  VpcId: !stack_output {{ env }}/vpc.yaml::VpcId
+  Environment: !stack_output {{ env }}/vpc.yaml::Environment
+  Subnet1: !stack_output {{ env }}/vpc.yaml::PublicSubnet1ID
+  Subnet2: !stack_output {{ env }}/vpc.yaml::PublicSubnet2ID
+  RDSEndpoint: !stack_output {{ env }}/rds.yaml::MySQLAddress
+  FileSystemID: !stack_output {{ env }}/efs.yaml::FileSystemID
+  ElbSecurityGroup: !stack_output {{ env }}/security-groups.yaml::ELBsg
+  WebSecurityGroup: !stack_output {{ env }}/security-groups.yaml::WEBsg
   AvailabilityZone1: us-east-1a
-  AvailabilityZone2: us-east-1b      
+  AvailabilityZone2: us-east-1b
   Hostname: www
   Domain: meetup.celab.cloudreach.com
   KeyName: meetup.cloudreach
   InstanceType: t2.large
-  DBName: !stack_output rds::DBName
+  DBName: !stack_output {{ env }}/rds.yaml::DBName
   DBPass: wordpress123
-  DBUser: !stack_output rds::DBUser
+  DBUser: !stack_output {{ env }}/rds.yaml::DBUser
   WebServerCapacity: "4"
 

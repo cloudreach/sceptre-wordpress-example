@@ -1,6 +1,5 @@
 template_path: src/vpc.py
 
-
 parameters:
   Project: WordpressEFS
   Environment: prod

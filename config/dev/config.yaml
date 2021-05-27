@@ -1,3 +1,4 @@
 #iam_role: arn:aws:iam::111111111111:role/CloudreachAdminRole
 region: "eu-west-1"
 template_bucket_name: sceptre-meetup-munich
+env: dev
