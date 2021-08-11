@@ -310,9 +310,6 @@ class WordpressASG(CloudformationAbstractBaseClass):
                 "--admin_user='root' ",
                 "--admin_password='wordpress' ",
                 "--admin_email='meetup@cloudreach.com'\n",
-                "wget  https://s3-eu-west-1.amazonaws.com/sceptre-meetup-munich/header.jpg -O /var/www/html/wp-content/themes/twentyseventeen/assets/images/header.jpg\n",
-                "chown www-data:www-data /var/www/html/wp-content/themes/twentyseventeen/assets/images/header.jpg\n",
-
                 "fi\n",
 
                 "/usr/local/bin/cfn-signal -e $? --stack ", Ref(
