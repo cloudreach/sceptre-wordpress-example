@@ -1,6 +1,6 @@
-template_path: src/security_groups.py
+template_path: security_groups.py
 
 parameters:
-  VpcId: !stack_output vpc::VpcId 
-  Environment: !stack_output vpc::Environment
+  VpcId: !stack_output {{ env }}/vpc.yaml::VpcId
+  Environment: !stack_output {{ env }}/vpc.yaml::Environment
 

@@ -9,7 +9,7 @@ class IamRole(object):
 
     def __init__(self, sceptre_user_data):
         self.template = Template()
-        self.template.add_description("""Wordpress Iam Role""")
+        self.template.set_description("""Wordpress Iam Role""")
         self.add_role()
         self.add_outputs()
 
@@ -85,4 +85,4 @@ def sceptre_handler(sceptre_user_data):
     return IamRole(sceptre_user_data).template.to_json()
 
 if __name__ == '__main__':
-    print sceptre_handler()
+    print (sceptre_handler())

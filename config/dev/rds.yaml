@@ -1,13 +1,13 @@
-template_path: src/rds.py
+template_path: rds.py
 
 parameters:
-  VpcId: !stack_output vpc::VpcId 
-  Subnet1: !stack_output vpc::PrivateSubnet1ID
-  Subnet2: !stack_output vpc::PrivateSubnet2ID 
-  Environment: !stack_output vpc::Environment
-  RDSSecurityGroup: !stack_output security-groups::RDSsg  
-  MultiAZDatabase: "false"   
-  DBInstanceClass: db.t2.micro 
+  VpcId: !stack_output {{ env }}/vpc.yaml::VpcId
+  Subnet1: !stack_output {{ env }}/vpc.yaml::PrivateSubnet1ID
+  Subnet2: !stack_output {{ env }}/vpc.yaml::PrivateSubnet2ID
+  Environment: !stack_output {{ env }}/vpc.yaml::Environment
+  RDSSecurityGroup: !stack_output {{ env }}/security-groups.yaml::RDSsg
+  MultiAZDatabase: "false"
+  DBInstanceClass: db.t2.micro
   DBAllocatedStorage: "7"
   DBName: wordpress
   DBPass: wordpress123
